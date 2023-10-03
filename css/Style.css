@@ -1,0 +1,922 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'mahmoud';
+
+}
+
+@font-face {
+    font-family: mahmoud;
+    src: url(../font/rhythmus-pro-bold.otf);
+}
+
+:root {
+    --mainColor: #2c4147;
+    --seconderyColor: #616d6f;
+}
+
+/* general  ======================================= */
+.mainColor{
+    color: var(--mainColor);
+}
+
+.p-num {
+    color: var(--seconderyColor);
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+.show {
+    display: block;
+}
+
+/* navbar section ================================ */
+header {
+    font-weight: bold;
+    height: 101.6px;
+    padding: 0px 50px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e7e7e7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header img {
+    width: 200px;
+    cursor: pointer;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a{
+    color: var(--seconderyColor);
+    text-decoration: none;
+    letter-spacing: 3px;
+    display: inline-block;
+    padding: 30px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #edc8bf;
+}
+
+header .show-list {
+    display: none;
+    color: var(--mainColor);
+    cursor: pointer;
+    padding: 20px 20px;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+}
+
+header .show-list:hover {
+    background-color: #edc8bf;
+}
+
+
+/* hero section ================================== */
+section#hero {
+    width: 100%;
+    margin-top: 101.6px;
+    min-height:calc(100vh - 101.6px) ;
+    padding: 0 80px;
+    overflow: hidden;
+}
+section#hero .container {
+    width: 100%;
+    height:calc(100vh - 101.6px) ;
+    padding: 0 150px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    position: relative;
+    align-items: center;
+    background: linear-gradient(to right, #ead0c1, #edc8bf, #f0bdbc);
+}
+section#hero .text-container {
+    grid-column: span 7;
+    width: 100%;
+    z-index: 77;
+}
+
+section#hero .text-container h1 {
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+section#hero .text-container a {
+    background-color: #fff;
+    padding: 20px 30px;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+section#hero .text-container a:hover {
+    background-color: #333;
+    color: white;
+}
+
+section#hero .img-container {
+    grid-column: span 5;
+    width: 100%;
+    height: 100%;
+    position:relative;
+    z-index: 1;
+}
+
+section#hero .img-container img {
+    width: 550;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    z-index: -1;
+    right: 0;
+}
+
+section#hero .shortcuts {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 20;
+}
+
+section#hero .shortcuts a {
+    text-decoration: none;
+    color: var(--mainColor);
+    margin-right: 20px;
+    cursor: pointer;
+} 
+
+
+
+/* services section ============================== */
+section#services {
+    padding: 100px 200px;
+}
+section#services .container {
+    display: flex;
+}
+
+section#services .l-div {
+    width: 33.3%;
+}
+
+section#services .r-div {
+    width: 66.7%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#services .r-div .service {
+    width: calc(100% / 2);
+    padding-bottom: 70px;
+    padding-right: 50px;
+}
+
+
+section#services .r-div .service h6 i {
+    font-size: 12px;
+}
+.pinky{
+    color:#efb1b7 !important;
+    cursor: pointer;
+}
+
+section#services .r-div .service p {
+    margin-top: 20px;
+    color: var(--seconderyColor);
+    font-size: 18px;
+}
+
+
+/* experts section =============================== */
+section#experts {
+    padding: 0 200px;
+}
+
+section#experts .txt-container{
+    text-align: center;
+}
+
+section#experts .txt-container {
+    margin-bottom: 30px;
+}
+
+section#experts .members-container{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 350px;
+    gap: 40px;
+}
+
+section#experts .members-container .member {
+    width: 100%;
+    position: relative;
+
+}
+
+section#experts .members-container .member .img-container {
+    width: 100%;
+    height: 300px;
+}
+
+section#experts .members-container .member .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section#experts .members-container .member .icons{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+section#experts .members-container .member .icons i {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+
+/* awards section ================================ */
+section#awards {
+    padding: 120px 200px;
+    margin-left: 30px;
+}
+
+section#awards .txt-container {
+    margin-bottom: 50px;
+}
+
+section#awards .container {
+    display: flex;
+}
+
+section#awards .container .l-div {
+    width: 60%;
+}
+
+section#awards .container .r-div {
+    width: 40%;
+}
+
+
+section#awards .container .l-div .award {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--seconderyColor);
+    display: flex;
+    align-items: center;
+}
+
+section#awards .container .l-div .award h5 {
+    font-size: 20px;
+}
+
+section#awards .container .l-div .award .details {
+    padding: 0 100px;
+}
+section#awards .container .l-div .award h4 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+section#awards .container .l-div .award p{
+    color: var(--seconderyColor);
+    font-size: 18px;
+}
+
+section#awards .container .r-div .img-container {
+    width: 100%;
+    height: 100%;
+}
+
+section#awards .container .r-div .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* footer section ================================ */
+footer {
+    height: 75px;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-size: 18px;
+}
+
+footer p {
+    color: var(--seconderyColor);
+}
+
+
+footer span {
+    cursor: pointer;
+}
+
+
+
+/* For Mobile Devices screans ================================= */
+@media (max-width: 480px) {
+
+
+/* general  ======================================= */
+h3 {
+    font-size: 40px;
+}
+
+/* navbar section ================================ */
+header {
+    padding: 20px 20px;
+}
+
+header nav ul{
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333333fb;
+    width: 100%;
+    display: none;
+}
+
+header nav ul li a{
+    padding: 20px 20px;
+}
+
+header .show-list {
+    display: block;
+}
+
+
+/* hero section ================================== */
+section#hero {
+    text-align: center;
+    margin-top: 75px;
+    min-height:calc(100vh - 75px) ;
+    padding: 0 0px;
+}
+section#hero .container {
+    height:calc(100vh - 75px) ;
+    padding: 0px 20px;
+    display: block;
+}
+section#hero .text-container {
+    width: 100%;
+}
+
+section#hero .text-container h1 {
+    font-size: 40px;
+    padding-top: 40px;
+}
+
+section#hero .text-container a {
+    padding: 10px 20px;
+}
+
+section#hero .img-container img {
+    width: 300;
+    height: 300px;
+    top: 70px;
+    z-index: -1;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+section#hero .shortcuts {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+}
+
+
+/* services section ============================== */
+section#services {
+    padding: 50px 20px;
+    text-align: center;
+}
+section#services .container {
+    flex-direction: column;
+}
+
+section#services .l-div {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+section#services .r-div {
+    width: 100%;
+}
+
+section#services .r-div .service {
+    width: 100%;
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+
+
+/* experts section =============================== */
+section#experts {
+    padding: 0 30px;
+}
+
+section#experts .members-container{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+section#experts .members-container .member .icons i {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* awards section ================================ */
+section#awards {
+    padding: 80px 30px;
+    margin-left: 0px;
+    text-align: center;
+}
+
+section#awards .txt-container {
+    margin-bottom: 30px;
+}
+
+section#awards .container {
+    flex-direction: column;
+}
+
+section#awards .container .l-div {
+    width: 100%;
+}
+
+section#awards .container .r-div {
+    width: 100%;
+}
+
+section#awards .container .l-div .award {
+    flex-direction: column;
+}
+
+section#awards .container .l-div .last {
+    margin-bottom: 40px;
+}
+
+section#awards .container .l-div .award .details {
+    padding: 0 10px;
+}
+
+section#awards .container .l-div .award h4 {
+    margin-bottom: 10px;
+}
+
+}
+
+
+/* For iPads and Tablets screans ============================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+
+   
+/* general  ======================================= */
+h3 {
+    font-size: 40px;
+}
+
+/* navbar section ================================ */
+header {
+    padding: 20px 40px;
+}
+
+header nav ul{
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333333fb;
+    width: 100%;
+    display: none;
+}
+
+header nav ul li a{
+    padding: 20px 20px;
+}
+
+header .show-list {
+    display: block;
+}
+
+
+/* hero section ================================== */
+section#hero {
+    text-align: center;
+    margin-top: 75px;
+    min-height:calc(100vh - 75px) ;
+    padding: 0 30px;
+}
+section#hero .container {
+    height:calc(100vh - 75px) ;
+    padding: 0px 20px;
+    display: block;
+}
+section#hero .text-container {
+    width: 100%;
+}
+
+section#hero .text-container h1 {
+    font-size: 50px;
+    padding-top: 40px;
+}
+
+section#hero .text-container a {
+    padding: 10px 20px;
+}
+
+section#hero .img-container {
+    width: 100%;
+    height: 100%;
+}
+
+section#hero .img-container img {
+    width: 300;
+    height: 300px;
+    top: 40px;
+    z-index: -1;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+section#hero .shortcuts {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* services section ============================== */
+section#services {
+    padding: 80px 20px;
+    text-align: center;
+}
+section#services .container {
+    flex-direction: column;
+}
+
+section#services .l-div {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+section#services .r-div {
+    width: 100%;
+}
+
+section#services .r-div .service {
+    width: calc(100% / 2);
+    padding-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+section#services .r-div .border {
+    border-right: 1px solid var(--seconderyColor);
+}
+
+
+/* experts section =============================== */
+section#experts {
+    padding: 0 20px;
+}
+
+section#experts .members-container{
+    grid-template-columns: repeat(1, 1fr); 
+    text-align: center;
+}
+
+section#experts .members-container .member .img-container img {
+    width: 70%;
+}
+
+section#experts .members-container .member .icons{
+    left: 120px;
+}
+
+section#experts .members-container .member .icons i {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+
+/* awards section ================================ */
+section#awards {
+    padding: 100px 10px;
+    margin-left: 0px;
+    text-align: center;
+}
+
+section#awards .txt-container {
+    margin-bottom: 0px;
+}
+
+section#awards .container {
+    flex-direction: column;
+}
+
+section#awards .container .l-div {
+    width: 100%;
+}
+
+section#awards .container .r-div {
+    width: 100%;
+}
+
+section#awards .container .l-div .award {
+    flex-direction: column;
+}
+
+section#awards .container .l-div .last {
+    margin-bottom: 40px;
+}
+
+section#awards .container .l-div .award .details {
+    padding: 0 10px;
+}
+
+section#awards .container .l-div .award h4 {
+    margin-bottom: 10px;
+}
+
+section#awards .container .r-div .img-container img {
+    width: 70%;
+    object-fit: cover;
+}
+
+    
+}
+
+
+
+
+/* For Laptops and small screens ============================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+/* general  ======================================= */
+h3 {
+    font-size: 40px;
+}
+
+/* navbar section ================================ */
+header {
+    padding: 20px 70px;
+}
+
+header nav ul{
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333333fb;
+    width: 100%;
+    display: none;
+}
+
+header nav ul li a{
+    padding: 20px 20px;
+}
+
+header .show-list {
+    display: block;
+}
+
+/* hero section ================================== */
+section#hero {
+    text-align: center;
+    margin-top: 75px;
+    min-height:calc(100vh - 75px) ;
+    padding: 0 20px;
+}
+section#hero .container {
+    height:calc(100vh - 75px) ;
+    padding: 0px 20px;
+    display: block;
+}
+section#hero .text-container {
+    width: 100%;
+}
+
+section#hero .text-container h1 {
+    font-size: 50px;
+    padding-top: 40px;
+}
+
+section#hero .text-container a {
+    padding: 10px 20px;
+}
+
+section#hero .img-container img {
+    width: 300;
+    height: 300px;
+    top: 40px;
+    z-index: -1;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+section#hero .shortcuts {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* services section ============================== */
+section#services {
+    padding: 80px 20px;
+    text-align: center;
+}
+section#services .container {
+    flex-direction: column;
+}
+
+section#services .l-div {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+section#services .r-div {
+    width: 100%;
+}
+
+section#services .r-div .service {
+    width: calc(100% / 2);
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+
+
+/* experts section =============================== */
+section#experts {
+    padding: 0 20px;
+}
+
+section#experts .members-container{
+    grid-template-columns: repeat(2, 1fr); 
+    text-align: center;
+}
+
+section#experts .members-container .member .icons{
+    left: 30px;
+}
+
+section#experts .members-container .member .icons i {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* awards section ================================ */
+section#awards {
+    padding: 80px 20px;
+    margin-left: 30px;
+}
+
+section#awards .txt-container {
+    margin-bottom: 20px;
+}
+
+section#awards .container {
+    display: flex;
+}
+
+section#awards .container .l-div {
+    width: 60%;
+}
+
+section#awards .container .r-div {
+    width: 40%;
+}
+
+section#awards .container .l-div .award .details {
+    padding: 0 30px;
+}
+
+}
+
+
+/* For Large screens and Desktops screens ===================== */
+@media (min-width: 1025px) and (max-width: 1300px) {
+
+
+/* general  ======================================= */
+h3 {
+    font-size: 40px;
+}
+
+/* hero section ================================== */
+section#hero {
+    padding: 0 30px;
+}
+
+section#hero .text-container h1 {
+    font-size: 60px;
+}
+
+section#hero .img-container img {
+    width: 400px;
+    height: 400px;
+    top: 90px;
+}
+
+
+/* services section ============================== */
+section#services {
+    padding: 80px 20px;
+    text-align: center;
+}
+section#services .container {
+    flex-direction: column;
+}
+
+section#services .l-div {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+section#services .r-div {
+    width: 100%;
+}
+
+section#services .r-div .service {
+    width: calc(100% / 2);
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+
+
+/* experts section =============================== */
+section#experts {
+    padding: 0 20px;
+}
+
+section#experts .members-container{
+    grid-template-columns: repeat(2, 1fr); 
+    text-align: center;
+    gap: 20px;
+}
+section#experts .members-container .member .img-container {
+    height: 300px;
+}
+
+section#experts .members-container .member .img-container img {
+    width: 70%;
+}
+
+section#experts .members-container .member .icons{
+    left: 120px;
+}
+
+section#experts .members-container .member .icons i {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* awards section ================================ */
+section#awards {
+    padding: 50px 100px;
+    margin-left: 30px;
+}
+
+section#awards .txt-container {
+    margin-bottom: 20px;
+}
+
+section#awards .container .l-div .award .details {
+    padding: 0 70px;
+}
+
+}
